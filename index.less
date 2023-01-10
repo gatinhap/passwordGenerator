@@ -1,7 +1,7 @@
 
 body {
-	//overflow: hidden;
 	box-sizing: border-box;
+	margin: 0;
 	padding: 64px 62px;
 	height: 100vh;
 	font-family: Inter, Arial, sans-serif;
@@ -14,12 +14,21 @@ body {
 	padding: 115px 52px;
 	max-width: 550px;
 	background-color: #1f2937;
+	
+	@media only screen and (max-width: 1000px) {
+		max-width: unset;
+		width: 100%;
+	}
 }
 
 .heading {
 	margin: 0;
 	font-family: Karla, Arial, sans-serif;
 	color: #fff;
+	
+	@media only screen and (max-width: 700px) {
+		font-size: 70px;
+	}
 	
 	span {
 		color: #4adf86;
@@ -29,6 +38,10 @@ body {
 p {
 	font-size: 20px;
 	color: #d5d4d8;
+	
+	@media only screen and (max-width: 700px) {
+		font-size: 34px;
+	}
 }
 
 .button {
@@ -44,6 +57,11 @@ p {
 	font-size: 16px;
 	color: #fff;
 	
+	@media only screen and (max-width: 700px) {
+		padding: 31px 65px;
+		font-size: 40px;
+	}
+	
 	&:hover {
 		transform: scale(1.1);
 		cursor: pointer;
@@ -57,19 +75,31 @@ p {
 	border-top: 1px solid #2f3e53;
 	padding-top: 35px;
 	
+	@media only screen and (max-width: 700px) {
+		margin-top: 80px;
+		padding-top: 80px;
+	}
+	
 	.password {
 		display: flex;
 		justify-content: center;
 		align-items: center;
+		box-sizing: border-box;
 		border-radius: 6px;
-		width: 211px;
-		height: 39px;
+		padding: 11px 32px;
+		min-width: 200px;
+		min-height: 40px;
 		color: #55F991;
 		background: #273549;
 		font-weight: 500;
 		font-size: 16px;
 		-webkit-user-select: all;
 		user-select: all;
+	}
+	
+	@media only screen and (max-width: 700px) {
+		padding: 31px 65px;
+		font-size: 40px;
 	}
 	
 	@media only screen and (max-width: 450px) {
@@ -86,13 +116,18 @@ p {
 		left: 50%;
 		user-select: none;
 		animation-duration: 1.5s;
-		//animation-fill-mode: forwards;
 		opacity: 0;
 		transform: translateX(-50%);
 		padding: 5px;
 		font-size: 10px;
 		color: #d5d4d8;
 		background-color: #000;
+		
+		@media only screen and (max-width: 700px) {
+			top: -63px;
+			padding: 11px;
+			font-size: 33px;
+		}
 		
 		&.run-animation {
 			animation-name: showCopyInfo;
